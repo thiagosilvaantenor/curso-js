@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    
+    <h1>Trabalhando com números</h1>
+    <button onclick="calculeNumero()"> Clique aqui para calcular</button>
+    <section id="resultado">
+        <p>O resultado vem aqui...</p>
+    </section>
+    <script>
+        
+            window.onload(window.alert("Sejá bem-vindo ao meu site!"))
+
+        function calculeNumero(){
+            let numero = window.prompt("Digite um número: ")
+            let dobro = numero * 2;
+            let metade = numero / 2;
+
+            let res = window.document.getElementById("resultado")
+            res.innerHTML = `<p>O dobro de ${numero} é ${dobro} e a metade é ${metade}</p>`
+        }
+
+    </script>
+</body>
+</html>
