@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcBhaskara()">Calcular</button>
+    <section id="res">
+        <h2>O resultado será exibido aqui</h2>     
+    </section>
+    <script>
+        function calcBhaskara(){
+            
+            let a = Number(window.prompt('Informe o valor de a'))
+            let b = Number(window.prompt('Informe o valor de b'))
+            let c = Number(window.prompt('Informe o valor de c'))
+            let r1
+            let r2
+            let delta = (Math.pow(b,2)) - (4*a*c);
+            
+            if (delta == 0){
+                r1 = ((-b) + (Math.sqrt(delta))) / (2*a)
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>A equação atual é ${a}x² + ${b}x + ${c} = 0 </p>
+                <p>O cálculo realizado será 🔺 = ${b}² -4.${a}.${c}</p>
+                <p> O valor calculado foi 🔺 = ${delta} </p>
+                <p> <strong> O valor da raiz 1 é ${r1} </strong> </p>
+                `
+            }
+            else if (delta > 0){
+                r1 = ((-b) + (Math.sqrt(delta))) / (2*a)
+                r2 = ((-b) - (Math.sqrt(delta))) / (2*a)
+
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>A equação atual é ${a}x² + ${b}x + ${c} = 0 </p>
+                <p>O cálculo realizado será 🔺 = ${b}² -4.${a}.${c}</p>
+                <p> O valor calculado foi 🔺 = ${delta} </p>
+                <p> <strong> O valor da raiz 1 é ${r1} </strong> </p>
+                <p> <strong> O valor da raiz 2 é ${r2} </strong> </p>
+                `
+            }
+            else {
+                let res = document.querySelector('section#res')
+                res.innerHTML = `<p>A equação atual é ${a}x² + ${b}x + ${c} = 0 </p>
+                <p>O cálculo realizado será 🔺 = ${b}² -4.${a}.${c}</p>
+                <p> O valor calculado foi 🔺 = ${delta} </p>
+                <p> <strong> Delta menor que zero, equação sem raizes </strong> </p>`
+                
+            }
+
+
+        }
+    </script>
+</body>
+</html>
