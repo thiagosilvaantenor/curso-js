@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+body{
+    font: 12pt Arial;
+    background-color: #98FF98;
+    margin-top: 10%;
+    margin-left: 25%;
+    align-items: center;
+}
+h1, h2, h3 {
+    font-family: 'Pacifico', cursive; font-weight: normal;
+}
+
+button {
+    font-size: 12pt; padding: 30px;
+    border: 1px solid #021602;
+    border-radius: 40px;
+    background-color: #48e143;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover{
+    background-color: #e7e74d;
+    cursor: pointer;
+}

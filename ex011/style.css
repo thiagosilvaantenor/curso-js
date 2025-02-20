@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    margin-top: 10%;
+    background-color: #E6E6FA; /* Lavanda claro */
+
+}
+
+.content {
+    padding: 20px 10px 40px 10px; /* Espaço interno: 20px no topo, 10px nas laterais e 40px na parte inferior */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da div */
+    background-color: #fefefefe; 
+    margin: 10%; /* Adiciona uma margem externa para afastar a div das bordas da tela */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+button{
+    padding: 2% 5%;
+    border: 1px solid rgb(202, 120, 19);
+    border-radius: 15px;
+    background-color: burlywood;
+    font-size: 1.2em;
+}
+
+button:hover{
+    background-color: rgb(191, 114, 13);
+    cursor: pointer;
+    transition: 2s;
+}
+
+/* Estilo da área de resultado */
+#situacao {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F9F9F9; /* Fundo mais claro para a área de resultado */
+    border-radius: 5px;
+    font-size: 1.8em;
+    
+}
+

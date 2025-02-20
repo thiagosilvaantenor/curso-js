@@ -1,0 +1,51 @@
+body {
+    background-color: blueviolet;
+    color: wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif4; /* Fonte simples */
+    height: 100vh; /* Garante que a altura seja 100% da tela */
+    margin: 0; /* Remove margens padrão */
+    text-align: center; /* Centraliza o texto */
+    font-size: 2.3em;
+}
+
+.conteudo{
+    margin-top: 10%;
+    border: 1px solid #FFEB3B;
+    border-radius: 25px;
+    border-width: 10%;
+
+}
+
+header{
+    display: flex; /* Utilizando flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column;
+    gap: 5px;
+
+}
+button{
+    padding: 1% 3% 1%;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: palegoldenrod;
+    font-weight: bold;
+    font-size: 0.7em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: rosybrown;
+    
+}
+
+/* Estilo do marcador de cliques */
+mark {
+    background-color: #FFEB3B; /* Cor de fundo amarelo suave */
+    color: #333333; /* Cor do texto (escuro para contraste) */
+    font-weight: bold;
+    padding: 0 5px; /* Um pequeno preenchimento ao redor do texto */
+    border-radius: 5px; /* Bordas arredondadas para suavizar o visual */
+}
+
