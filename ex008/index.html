@@ -4,29 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 008</title>
+    <style>
+        /* Definindo o estilo global da página */
+        body {
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ffb340c-45b5-4137-8b12-98f2fe9645c6/de2dwyn-3c96e3fc-4e2c-4291-b850-beb70e8a44e4.png/v1/fill/w_800,h_602/hatsune_miku_plush_toy__png__by_autism79_de2dwyn-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAyIiwicGF0aCI6IlwvZlwvMWZmYjM0MGMtNDViNS00MTM3LThiMTItOThmMmZlOTY0NWM2XC9kZTJkd3luLTNjOTZlM2ZjLTRlMmMtNDI5MS1iODUwLWJlYjcwZThhNDRlNC5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6CzChyEGxAcHSPP5HMCr3fqghcqCe8C0YVwVicq-Wzg'); /* URL da imagem da Hatsune Miku */
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-attachment: fixed; /* A imagem fica fixa durante o scroll */
+            color: #333333; /* Cor do texto escuro */
+            font-family: 'Arial', sans-serif; /* Fonte simples e moderna */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Centralizando o conteúdo */
+        div {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #553BE3;
+        }
+
+        button {
+            background-color: #553BE3; /* Cor do botão roxa */
+            color: #FFFFFF; /* Texto branco no botão */
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #6C98D3; /* Muda para roxo mais claro ao passar o mouse */
+        }
+
+        #result {
+            background-color: #F9F9F9; /* Fundo cinza claro para a área de resultados */
+            color: #333333; /* Texto escuro */
+            border-radius: 25px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        hr {
+            border: 1px solid #E0E0E0;
+        }
+
+        strong {
+            color: #553BE3; /* Cor roxa para destaque de número */
+        }
+    </style>
 </head>
-<body style=
-"background-color:#553BE3;
-color: #87B3E3;
+<body>
+    <div>
+        <h1>Vários Cálculos</h1>
+        <button onclick="calcular()">Clique para calcular</button>
 
-">
-    <h1>Vários Cálculos</h1>
-    
-    <button onclick="calcular()">Clique para calcular</button>
-
-    <section id="result"
-    
-    style="border: 1px solid #0000;
-           border-radius: 25px;">
-        <p>O resultado vai aparecer aqui</p>
-    </section>
+        <section id="result">
+            <p>O resultado vai aparecer aqui</p>
+        </section>
+    </div>
 
     <script>
         function calcular(){
             let num = Number(prompt('Digite um número: '))
             let res = document.querySelector('section#result')
 
-            //Template Literal = recurso novo do JS: junta texto e variaveis
+            //Template Literal = recurso novo do JS: junta texto e variáveis
             res.innerHTML = `<p> O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`
             res.innerHTML += `<p> O seu valor absoluto é ${Math.abs(num)}</p>`
             res.innerHTML += `<p> A sua parte inteira é ${Math.trunc(num)}</p>`
@@ -37,8 +100,5 @@ color: #87B3E3;
             res.innerHTML += `<p> O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)} </p>` 
         }
     </script>
-
-
-
 </body>
 </html>
