@@ -7,7 +7,8 @@ function calcCambio(){
     
     let valCambio = Number(5.71)
     
-        saida.innerHTML = `<p>O valor de cambio para R$${n}<br>Com cambio de 1 dolar = R$${valCambio}<br> Com taxa de cambio de: 1,5% e IOF de 0,38% será: </p>`
+        saida.innerHTML = `<h2> R E S U L T A D O </h2>
+        <p>O valor de cambio para R$${Number.parseFloat(n).toFixed(2)}<br>Com câmbio de 1 dolar = R$${Number.parseFloat(valCambio).toFixed(2)}<br> Com taxa de câmbio de: 1,5% e IOF de 0,38% será: </p>`
         
         // To-do: Tem que fazer uma regra de 3:
         // 5,71 == 1 dol
@@ -16,12 +17,12 @@ function calcCambio(){
         //x = n / 5,71
 
         let taxa = n * 0.015
-        saida.innerHTML += `<p>Valor deduzido da taxa de cambio = ${Number.parseFloat(taxa).toFixed(2)}</p>`
+        saida.innerHTML += `<p>Valor deduzido da taxa de cambio = U$${Number.parseFloat(taxa).toFixed(2)}</p>`
         let iof = n * 0.0038
-        saida.innerHTML += `<p>Valor deduzido da taxa de IOF = ${Number.parseFloat(iof).toFixed(2)}</p>`
+        saida.innerHTML += `<p>Valor deduzido da taxa de IOF = U$${Number.parseFloat(iof).toFixed(2)}</p>`
         let nCambio = n / valCambio; 
-        saida.innerHTML += `<p> Valor em dolares: ${Number.parseFloat(nCambio).toFixed(2)}`
+        saida.innerHTML += `<p> Valor em dolares: U$${Number.parseFloat(nCambio).toFixed(2)}`
         let result = ( n - (taxa + iof)) / valCambio ; 
-        saida.innerHTML += `<p>Valor após as deduções: <strong>U$ ${Number.parseFloat(result).toFixed(2)}</strong></p> `
+        saida.innerHTML += `<p>Valor após as deduções: <strong>U$${Number.parseFloat(result).toFixed(2)}</strong></p> `
 
 }
